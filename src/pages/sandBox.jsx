@@ -1,11 +1,11 @@
-import AllCardGrid from "../components/grids/allCardsGrid";
+import SandBoxGrid from "../components/grids/sandBoxGrid";
 import PageHeader from "../components/common/pageHeader";
 import { useAuth } from "../context/auth.context";
 import cardService from "../services/cardService";
 import { useState, useEffect } from "react";
 import { toast } from "react-hot-toast";
 
-function Home() {
+function SandBox() {
   const { user } = useAuth();
 
   const [allCards, setAllCards] = useState([]);
@@ -63,10 +63,8 @@ function Home() {
   return (
     <div className="flex-fill container my-5">
       <PageHeader
-        title={"Business Cards WebSite"}
-        description={
-          "this website help you to create business cards and to share your cards to others business"
-        }
+        title={"Sand Box"}
+        description={"This Page Use For Admin Users Only"}
       />
       <form className="d-flex m-5" role="search">
         <input
@@ -88,10 +86,10 @@ function Home() {
       </form>
 
       <div className="row gap-3 justify-content-center">
-        <AllCardGrid cards={displayedCards} />
+        <SandBoxGrid cards={displayedCards} />
       </div>
     </div>
   );
 }
 
-export default Home;
+export default SandBox;

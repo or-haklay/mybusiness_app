@@ -1,9 +1,11 @@
 import Logo from "./common/logo";
 import { NavLink } from "react-router";
 import { useAuth } from "../context/auth.context";
+import { useTheme } from "../context/theme.context";
 
 function NavBar() {
   const { user, userData } = useAuth();
+  const { toggleTheme, theme } = useTheme();
 
   async () => {
     await userData;
@@ -59,9 +61,30 @@ function NavBar() {
                 Favorites
               </NavLink>
             </li>
+            <li
+              className="nav-item dropdown"
+              style={{ display: user?.isAdmin ? "block" : "none" }}
+            >
+              <NavLink to="/sand-box" className="nav-link " aria-current="page">
+                Sand Box
+              </NavLink>
+            </li>
           </ul>
 
-          <ul className="navbar-nav mr-5  pr-5">
+          <ul className="navbar-nav mr-5  pr-5 mb-2 mb-lg-0 d-flex align-items-center">
+            <li className="nav-item">
+              <button
+                className="btn   btn-secondary rounded-circle ms-2"
+                onClick={toggleTheme}
+                aria-label="Toggle theme"
+              >
+                {theme === "dark" ? (
+                  <i className="bi bi-sun-fill"></i> // אייקון שמש במצב חשוך
+                ) : (
+                  <i className="bi bi-moon-stars-fill"></i> // אייקון ירח במצב בהיר
+                )}
+              </button>
+            </li>
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle text-white fw-bold d-flex align-items-center"

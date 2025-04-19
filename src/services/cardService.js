@@ -68,7 +68,6 @@ function updateCard(card, cardID) {
 }
 
 function likeCard(cardId) {
-  //this also disLikes the card if it was already liked
   return httpServices.patch(`/cards/${cardId}`);
 }
 

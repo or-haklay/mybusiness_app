@@ -22,7 +22,7 @@ function DeleteCard({ isOn, onClose, card }) {
       style={{ zIndex: 1050 }}
     >
       <div
-        className="bg-light p-4 rounded shadow-lg"
+        className="bg-body border border-success p-4 rounded shadow-lg"
         style={{
           maxWidth: "90%",
           maxHeight: "90%",
@@ -30,7 +30,7 @@ function DeleteCard({ isOn, onClose, card }) {
           width: "600px",
         }}
       >
-        <div className="my-0 d-flex align-items-center justify-content-end">
+        <div className="my-0 d-flex align-items-center justify-content-end ">
           <button
             type="button"
             aria-label="Close"

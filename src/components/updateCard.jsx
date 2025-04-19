@@ -1,7 +1,7 @@
 import PageHeader from "./common/pageHeader";
 import Input from "./common/input";
 import { useFormik } from "formik";
-import Joi, { array } from "joi";
+import Joi from "joi";
 import cardService from "../services/cardService";
 import { toast } from "react-hot-toast";
 
@@ -78,11 +78,11 @@ function UpdateCard({ isOn, onClose, card }) {
   return (
     <div
       className="position-fixed top-0 start-0 end-0 bottom-0 bg-dark bg-opacity-50 d-flex align-items-center justify-content-center"
-      style={{ zIndex: 1050 }} // Ensure it's on top of other elements
+      style={{ zIndex: 1050 }}
     >
       <form
         onSubmit={handleSubmit}
-        className="bg-light p-4 rounded shadow-lg"
+        className="bg-body border border-success p-4 rounded shadow-lg"
         style={{
           maxWidth: "90%",
           maxHeight: "90%",

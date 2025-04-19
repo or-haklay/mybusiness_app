@@ -1,5 +1,5 @@
 import React from "react";
-import PageHeader from "../components/common/pageHeader"; // Assuming you have this component
+import PageHeader from "../components/common/pageHeader";
 
 function About() {
   return (

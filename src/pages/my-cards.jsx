@@ -1,5 +1,5 @@
 import AllMyCardGrid from "../components/grids/allMyCardsGrid";
-import { Link } from "react-router"; // Import Link for navigation
+import { Link } from "react-router";
 
 function MyCards() {
   return (
