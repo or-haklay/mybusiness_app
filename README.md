@@ -1,12 +1,54 @@
-# React + Vite
+# פרויקט כרטיסי ביקור דיגיטליים (BCard - React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## תיאור כללי
 
-Currently, two official plugins are available:
+אפליקציית רשת (Single Page Application) שנבנתה באמצעות React לניהול כרטיסי ביקור דיגיטליים. האפליקציה מאפשרת למשתמשים לצפות בכרטיסי ביקור, להירשם ולהתחבר למערכת, לנהל רשימת מועדפים, לערוך את פרטי הפרופיל האישי שלהם, ולמשתמשים עסקיים - גם לנהל את כרטיסי הביקור שיצרו. הפרויקט כולל גם אפשרות למעבר בין עיצוב בהיר (Light Mode) לעיצוב כהה (Dark Mode).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## תכונות עיקריות (Features)
 
-## Expanding the ESLint configuration
+- **אימות משתמשים:** הרשמה, התחברות והתנתקות.
+- **ניהול פרופיל:** צפייה ועריכה של פרטי משתמש רשום.
+- **צפייה בכרטיסי ביקור:** הצגת כרטיסים הזמינים במערכת.
+- **ניהול מועדפים:** אפשרות למשתמשים רשומים לסמן כרטיסים כמועדפים ולצפות ברשימת המועדפים שלהם.
+- **ניהול "הכרטיסים שלי" (למשתמשים עסקיים):** אפשרות למשתמשים שהוגדרו כעסקיים לנהל את כרטיסי הביקור שלהם (יצירה, עריכה, מחיקה - יש לוודא שהפונקציונליות קיימת).
+- **עיצוב דינמי:** כפתור להחלפה בין מצב בהיר למצב כהה (Dark Mode) המשפיע על כל האפליקציה.
+- **עיצוב רספונסיבי:** התאמה למסכים בגדלים שונים (באמצעות Bootstrap).
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## טכנולוגיות וספריות עיקריות
+
+- **React:** ספריית JavaScript לבניית ממשקי משתמש.
+- **React Router DOM:** ניהול ניתוב וניווט בין עמודים באפליקציה.
+- **React Context API:** ניהול מצב גלובלי (למשל, מצב אימות משתמש, מצב עיצוב בהיר/כהה).
+- **Formik:** ניהול טפסים (נצפה בשימוש בטופס עריכת משתמש).
+- **Joi:** ולידציה של נתונים בצד הלקוח (בשילוב עם Formik).
+- **Axios:** ביצוע בקשות רשת (HTTP requests) לשרת ה-API.
+- **Bootstrap 5:** ספריית CSS ו-JS לעיצוב רספונסיבי ורכיבי UI מוכנים.
+- **Bootstrap Icons:** ספריית אייקונים.
+- **`react-hot-toast`:** הצגת הודעות Toast (Notifications) למשתמש.
+
+## הסבר על העמודים
+
+**כל משתמש:**
+
+- ** REGISTER** - הרשמה עם משתמש חדש.
+- ** SIGN-IN** - כניסה למשתמש קיים.
+- ** HOME** - מאפשר לחפש כרטיסי ביקור בכל הAPI ןלסמן אותם כמועדיפים במידה ואתה משתמש מחובר.
+- ** ABOUT** - הסבר כללי על האתר עצמו ואופן התפעול.
+- ** FAVORIT CARDS** - מציג רק את הכרטיסים שסומנו כמועדפים, וניתן רק ראות אותם או להוריד מהמועדפים.
+
+**משתמש ביזנס:**
+
+- ** MY CARDS** - הצגת הכרטיסים של אותו המשתמש, ניתן למחוק ולערוך כרטיסים קיימים או ליצור כרטיס חדש.
+
+**משתמש אדמין:**
+
+- **SANDBOX** - הצגת כלל הכרטיסים בAPI ו היכולת לערוך ולמחוק אותן.
+
+## פיצרים נוספים
+
+** \* מחוונים על הצלחות ושגיאה.**
+** \* וולידציה של טפסים**
+** \* מחוונים על הצלחות ושגיאה.**
+** כפתור בתפריט שמחליף בין מצב חשוך לבהיר**
+** \* שדה לחיפוש בדף הבית ובSANDBOX**
+** \* laoding spinner – בזמן שמחכים לנתונים**
